@@ -38,3 +38,12 @@ print("Is jo mama a phone number?") # False
 print(isPhoneNumber("jo mama"))
 print("Is 4131123-1234 a phone number?") # False
 print(isPhoneNumber("4131123-1234"))
+
+# Additionally we can use the isPhoneNumber function to find the phone number within a string of text
+message = "Call me at 123-123-1234, please!"
+
+for i in range(len(message)):
+    block = message[i:i+12]
+
+    if isPhoneNumber(block):
+        print("Phone number found! " + block)
